@@ -8,7 +8,7 @@ handler.setFormatter(logging.Formatter(logging.BASIC_FORMAT))
 
 logger = logging.getLogger(__name__)
 logger.setLevel("DEBUG")
-# logger.addHandler(handler)
+logger.addHandler(handler)
 
 
 def protocol_factory():
