@@ -28,3 +28,4 @@ python client_example.py
   * it doesn't guarantee order of delivery
   * but it is fast, because you don't have to wait for confirmation of delivery
 * UDP can also be used to send log messages to `syslog` via the `SysLogHandler`
+* Messages can't be more than ~9 KB in size on macOS
