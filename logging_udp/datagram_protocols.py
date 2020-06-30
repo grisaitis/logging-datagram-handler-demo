@@ -17,11 +17,12 @@ class LoggingDatagramHandlerProtocol(asyncio.DatagramProtocol):
 
 class StringProtocol(asyncio.DatagramProtocol):
     def datagram_received(self, data: bytes, addr: Address):
-        print(data.decode('utf-8'))
+        print(data.decode("utf-8"))
 
 
 class JsonProtocol(asyncio.DatagramProtocol):
     def datagram_received(self, data: bytes, addr: Address):
         import json
-        json_obs = json.loads(data, encoding='utf-8')
+
+        json_obs = json.loads(data, encoding="utf-8")
         print(json_obs.dumps(indent=2, sort_keys=True))
